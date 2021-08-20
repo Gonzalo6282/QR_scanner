@@ -3,9 +3,7 @@ from cv2 import data
 import numpy as np
 from pyzbar.pyzbar import decode
 
-#img = cv2.imread('1.jpg')
-#code = decode(img)
-
+# Capture webcam
 cap = cv2.VideoCapture(0)
 cap.set(3, 640)
 cap.set(4, 480)
@@ -13,6 +11,7 @@ cap.set(4, 480)
 with  open('myDatafile.text') as f:
     myDataList = f.read().splitlines()
 
+# Main loop
 while True:
     
     success, img = cap.read()
